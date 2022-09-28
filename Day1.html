@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Interview Preparation Day-1</title>
+    <link rel="stylesheet" href="./Day1.css">
+</head>
+<body>
+    <div id="q1">
+        <div>
+            <h1>Q1.What is Virtual DOM?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>Virtual DOM is an in-memory representation of real DOM. 
+                It is a lightweight JavaScript object which is a copy of Real DOM.
+                in this behid,there are two doms,first one is copy of real dom another is a updating dom ,
+                Now when any user makes any changes on the screen like button click because of which the state variable will get updated so in this case the changes will not directly go to Real DOM .
+                Now these two virtual doms will get compared with each other and will check for the new changes.
+                if any changes then virtual dom to be modified ,again virtual dom one sync with the real dom ,and real dom will be getting updated.
+                this complete procedure is known as diffing algorithm.Now the new changes will be updated in your Real dom. this procedure is known as Recoinciliation.
+
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q2.What is SPA?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>SPA means Basically Single Page Application which will be not re-rendered.
+                it will be going to get the content ,without reloding the app or website.or we can change the content dynamically 
+                without creating the more than one pages in SPA.When we create React application using CRA,
+                 (create-react-app boilerplate , developed by Facebook) it always create the application which will be Single page application.
+                 SPA Examples are:
+                 <ul class="ul">
+                    <li>Gmail</li>
+                    <li>Google Maps</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Google Drive</li>
+                </ul>
+
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q3.What is difference between class and functional component?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span><br>
+                <span class="cc">Class Components:</span> 
+                <ul>
+                    <li>class components are stateful components(In React, a stateful component is a component that holds some state like this. setState)</li>
+                    <li>Class components uses the react Lifecycle Method</li>
+                    <li>class component syntex a little bit complex</li>
+                    <li>Constructor structure is required since these are class components.</li>
+                    <li>Contains state variable</li>
+                    <li>example: constructor(props) { super(props); this.state = {name: ‘ ‘} }</li>
+                    <li>It must have the render() method returning JSX (which is syntactically similar to HTML)</li>
+                </ul>
+                <span class="fc">Functional Components:</span>
+                <ul>
+                    <li>Functional Components are stateless components(Stateless components are those components which don't have any state at all, which means you can't use this. setState inside these components.)</li>
+                    <li>These components dones not have lifecyle method ,they have hooks like useEffect</li>
+                    <li>There is no render method used in functional components.</li>
+                    <li>function component syntex is easy</li>
+                    <li>No need of constructor</li>
+                    <li>Don't have state variable ,they have hooks like useState.</li>
+                    <li>There is no render method ,only return method used in functional components.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q4.What does mean by state and its use in react?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+                <pre>
+                    class Greeting extends React.Component {
+                        constructor() {
+                          super(); 
+                          this.state = {
+                            name: 'John Smith'
+                          }
+                        }
+                        render() {
+                          return 
+        Hello, my name is { this.state.name }
+        ;
+                        }
+                      }
+                </pre>
+            </p>
+            <ul>
+                <li>State is similar to props, but it is private and fully controlled by the component ,i.e., it is not accessible to any other component till the owner component decides to pass it.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q5.What is JSX and why do we use it instead of js?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                JSX stands for JavaScript XML. It is simply a syntax extension of JavaScript. 
+                It allows us to directly write HTML in React (within JavaScript code).
+                 It is easy to create a template using JSX in React, 
+                 but it is not a simple template language instead it comes with the full power of JavaScript.
+                 Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
+                 You can embed any JavaScript expression in JSX by wrapping it in curly braces.
+                 <pre>
+                    const element = React.createElement(
+                        'h1',
+                        {"className":"greeting"},
+                        'hello , World!'
+                    )
+                 </pre>
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q6.What is package.json?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                in package.json files will be having all related files or we can say updated information for files
+                or packages if we installing any packages,in this file we can check that files install or not.
+                .The package. json file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
