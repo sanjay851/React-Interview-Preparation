@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Interview Preparation Day-2</title>
+    <link rel="stylesheet" href="./Day2.css">
+</head>
+<body>
+    <div id="flex">
+        <div class="q1">Q1.What is the Difference between react and react native? Which one is library or framework?</div>
+        <div><span class="a1">Answer:</span><br><br>
+            <span class="a1">React</span>
+            <p class="pans">React is an open-source JS library for building the UIs for web applications </p>
+            <p class="pans">React is a Front End Development library</p>
+            <p class="pans">ReactJS uses VirtualDOM, a tool that allows for easy interaction with DOM elements.
+                ReactJS uses the React router to allow users to visit different web pages.
+                ReactJS supports third-party packages but lacks native library support.
+                Ex-Facebook, Netflix, Medium, Udemy</p>
+            <span class="a1">React Native</span>
+            <p class="pans">React Native is used to build rich mobile UI from declarative components using only JavaScript.</p>
+            <p class="pans">React Native is  native mobile Development library</p>
+            <p class="pans">Since it is used for native applications, it takes a sufficient amount of developer effort to be customized and executed on all platforms.</p>
+            <p class="pans">React Native widely uses native APIs.
+                React Native uses its built-in Navigator library to allow users to visit different screens.
+                React Native lacks both native libraries and third-party packages support.
+                It is used to develop true native mobile applications.
+                Ex-Uber Eats, Tesla</p>
+        <h1 class="pans">Both React and React Native are ruling the industry and are widely used for mobile and web applications.</h1>
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q2.What is the package name you are using for routing?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">react-router-dom are using for Routing.
+                React Router is a fully-featured client and server-side routing library for React, a JavaScript library for building user interfaces. React Router runs anywhere React runs; on the web, on the server with node.js, and on React Native.</p>
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q3.Routing Implementation?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">
+                In web application, Routing is a process of binding a web URL to a specific resource in the web application. In React, it is binding an URL to a component. React does not support routing natively as it is basically an user interface library.
+                </p>
+                <h1>example: only show for example how we can decleare router</h1>
+                <pre >
+                    <h1 class="pans">
+                        export default function App() {
+                        return (
+                          BrowserRouter
+                            Routes
+                              Route path="/" element={<Layout />}>
+                                /Route index element={<Home />} />
+                                /Route path="blogs" element={<Blogs />} />
+                                /Route path="contact" element={<Contact />} />
+                                /Route path="*" element={<NoPage />} />
+                              /Route>
+                            /Routes>
+                          /BrowserRouter>
+                        );
+                      }
+                    </h1>
+                    
+                </pre>
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q4.How do you pass data from parent to child?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">
+                React.js allows us to use props (short form of property) to pass data from parent component to child component. We have to set props value inside the child component, while we embed it to the parent component.
+            </p>
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q5.What is lazy loading in react ?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">
+                Lazy loading is a design pattern for optimizing web and mobile apps. The concept of lazy loading is simple: initialize objects that are critical to the user interface first and quietly render noncritical items later.
+
+React has two features that make it very easy to apply code-splitting and lazy loading to React components: React.lazy() and React.Suspense.
+
+React.lazy() is a function that enables you to render a dynamic import as a regular component. Dynamic imports are a way of code-splitting, which is central to lazy loading. A core feature as of React 16.6, React.lazy() eliminates the need to use a third-party library such as react-loadable.
+
+React.Suspense enables you to specify the loading indicator in the event that the components in the tree below it are not yet ready to render.
+            </p>
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q6.Difference b/w Stateful and stateless Component?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">
+                <span class="a1">Stateful Component</span>
+                Stateful components are those components which have a state. The state gets initialized in the constructor. It stores information about the component’s state change in memory. It may get changed depending upon the action of the component or child components.
+            </p>
+            <p class="pans">
+                <span class="a1">Stateless Component</span>
+                Stateless components are those components which don’t have any state at all, which means you can’t use this.setState inside these components. It is like a normal function with no render method. It has no lifecycle, so it is not possible to use lifecycle methods such as componentDidMount and other hooks.
+            </p>
+            
+        </div>
+    </div>
+    <div id="flex">
+        <div class="q1">Q7.How do you switch one component to another, Conditional Rendering?</div>
+        <div><span class="a1">Answer:</span><br>
+            <p class="pans">Switch Component allows the user to toggle the state of a single setting on or off. We can use the following approach in ReactJS to use the Evergreen Switch Component. <br>using props we can switch one component to another.
+                <br><br><span class="a1">Conditional Rendering</span>
+                In React, conditional rendering refers to the process of delivering elements and components based on certain conditions.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
