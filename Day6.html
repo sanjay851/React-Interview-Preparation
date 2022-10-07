@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6</title>
+    <link rel="stylesheet" href="./Day6.css">
+</head>
+<body>
+    <div id="q1">
+        <div>
+            <h1>Q1.What is an event in react?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                An event is a action to interacts with the application.any event like button 
+                click,hover,page load onSubmit,onClick etc actions are knownn as event/event Handlers.
+                <br>in react events are written in camecase like onClick,onChange,onSubmit etc. <br>
+                React events are written inside the Curly braces. <br>
+                example:onclick = {function name}/{shoot}
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q2.What is memory leak and how to overcome?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                A memory leak is a commonly faced issue when developing React applications. It causes many problems, including: affecting the project's performance by reducing the amount of available memory; slowing down the application; and. crashing the system.
+                <br>Memory leak occurs when programmers create a memory in heap and forget to delete it. <br><br> or According to Wikipedia, a memory leak is a type of resource leak that occurs when a computer program incorrectly manages memory allocations in a way that memory that is no longer needed is not released. A memory leak may also happen when an object is stored in memory but cannot be accessed by the running code.
+                <br>How to fix this problem? <br>
+                It is very simple to fix this problem. just cancel the request when a component unmounts. I fixed this problem in my project which uses Axios library for API calls.
+
+In the functional component, before making axios request, just grab the cancelToken and save it using Refs like so:
+<br>
+<pre>
+    const CancelToken = axios.CancelToken;
+  const source = CancelToken.source();
+  const sourceRef = React.useRef(source)
+</pre> <br>
+<h1>Then in your useEffect, cancel the network request in a return function which will get called by React when a component unmounts.</h1>
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q3.Do you prefer function-based or class component and why ?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                Before finding the better option, we are going to create class components and functional components.
+
+When creating a React component, the component’s name MUST start with an upper case letter.
+<br>
+<h1>Class Component</h1><br>
+<p>To define a React component class, your class need to extend with React.Component.
+
+    The render() method must be defined in the class component. Other React.Component methods are optional like constructor() componentDidMount(), etc.
+<h1>Functional Component</h1>
+<p>Functional components are easy to write with less code and easier to understand. Because it is just a plain JavaScript function that returns JSX.
+    <pre>
+        function Hello() {
+            return <h2>Hello World!</h2>;
+          }
+            
+          const element = <Hello />;
+          ReactDOM.render(
+            element,
+            document.getElementById(‘root’)
+          );
+    </pre>
+</p>
+<p>so we can say that functional component is better to use.</p>
+</p>
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q4.Explain reducer as pure function in redux</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                In Redux, a reducer is a pure function that takes an action and the previous state of the application and returns the new state. The action describes what happened and it is the reducer's job to return the new state based on that action. It may seem simple, but it does have to be a pure function with no side effects.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q5.Why do we use redux thunk?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                we will focus on a redux middleware called thunk. It allows us to return functions instead of objects from redux actions. Plain redux doesn't allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q6.What do you know about NPM?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                npm is an abbreviation used for the node package manager. It is a package manager for JavaScript. It is the default package manager that comes with NodeJS when you install it. <br>
+                by thid NPM we can know about our project,what is happing in project,and when we install 
+                any packages in my project than we can also track that package install or not properly.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

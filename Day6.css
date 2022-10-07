@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(232, 125, 10);
+}
+#q1{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 60, 127);
+    padding: 25px;
+    border-radius: 25px;
+    margin: 10px;
+}
+p{
+    font-size:30px;
+    color:rgb(255, 72, 72);
+}
+.ans{
+    background-color: black;
+    color: gold;
+}
+h1{
+    color: gold;
+    background-color: black;
+}
