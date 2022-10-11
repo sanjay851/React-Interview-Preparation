@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-4</title>
+    <link rel="stylesheet" href="./Day4.css">
+</head>
+<body>
+    <div id="q1">
+        <div>
+            <h1>Q1.What is UseRef Hook ?(Implementation)</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                useRef(initialValue)is a built-in React hook that accepts one argument as the initial value and returns a reference. A reference is an object having a single property “current”, which can be accessed and changed (mutated).
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q2.What is Context api?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                It creates a context object. The React Context API is a component structure, which allows us to share data across all levels of the application. The main aim of Context API is to solve the problem of prop drilling (also called "Threading").
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q3.Difference between callback and useCallback Hook ?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                <span class="ans">callback:</span>
+                callback is javascript function,when argument passed to an function whereas another one is hook, in this you pass another function as an argument.
+                <br><br>
+                <span class="ans">useCallback Hook:</span>
+                The useCallback hook is used Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q4.What is Props Drilling Concept ?What is State Uplifting ?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span><br>
+                <span class="ans">Props Drilling Concept:</span>
+                Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level.
+                <br><br>
+                <span class="ans">State Uplifting:</span>
+                by Lifting up the state we make the state of the parent component as a single source of truth and pass the data of the parent in its children.
+                <br><br>
+                Time to use Lift up the State: If the data in “parent and children components” or in “cousin components” is Not in Sync.
+               <br><br>
+                <span class="ans"> Example :</span>
+                If we have 2 components in our App. A -> B where, A is parent of B. keeping the same data in both Component A and B might cause inconsistency of data. 
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q5.Difference between useEffect and useContext ?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                <br>
+                <span class="ans"> useEffect:</span>
+                when we want to perform something after each render of component, then we use useEffect. it taked callback function & empty array as the dependency list.
+    it runs only once after initial rendering.
+                <br><br>
+                <span class="ans">useContext:</span>
+                This hook was designed to access the data from the contaxt API & pass data without props. context will work globally.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q6.What are React Life cycles Explain each one with Example?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br> <br>
+                <ul>
+                    <li> Mounting</li>
+                    <li> Updating</li>
+                    <li> Unmounting</li>
+                </ul>
+                 <h1>Mounting :- It instance of creating or inserting a elements into the DOM.</h1>
+                 <br><br>
+                <span class="rlc">React has four built-in mounting methods :</span> 
+            </p>
+            <p>1. <b>constructor()</b>: used to initialize an object's  state in a class. it is called before the component is mounted.</p>
+            <p>2. <b>getDerivedStateFromProps()</b>: is used before rendering in the DOM.</p>
+            <p>3. <b>render()</b>: method is required and will always be called, the others are optional and will be called if you define them.</p>
+            <p>4. <b>componentDidMount()</b>: allows us to execute the react code when the component is already placed in the DOM.</p>
+            <br><br>
+            <h1>Updating:- The component is updated whenever there is a change in the component's state & props.</h1>
+            <span class="rlc"> React has five built-in updating methods :</span> 
+            <p>1. <b>getDerivedStateFromProps()</b>: used to update the state, before rendering the component, which depends on props.</p>
+            <p><b>2. shouldComponentUpdate()</b>: It only updates the component if the props passed to it changes. and it aviod calling exits react component from re-render </p>
+            <p><b>3. render()</b>: when component gets updated, it has to re-render the HTML to the DOM, with the new changes.</p>
+            <p> <b>4. getSnapshotBeforeUpdate()</b>: method is invoked just before the DOM is being rendered. It is used to store the previous values of the state after the DOM is updated.</p>
+            <p><b>5. ComponentdidUpdate()</b>: allows to execute the react code when the component is updated. when the props passed to the component changes are coded here.</p>
+           <br>
+            <h1>Unmounting:- The component is removed from the DOM.</h1>
+            <span class="rlc"> React has one built-in updating methods :</span> 
+            <p> <b>1. ComponentWillUnmount()</b>: allows to execute the react code when the component is destoryed or Unmounting from the DOM. before the component gets unmounted.</p>
+        </div>
+    </div>
+</body>
+</html>
