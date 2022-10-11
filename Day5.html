@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5</title>
+    <link rel="stylesheet" href="./Day5.css">
+</head>
+<body>
+    <div id="q1">
+        <div>
+            <h1>Q1.High Order Component in react js ?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                It is the advanced method of reusing the component functionality logic. It simply
+    takes the original component & return the enhanced component.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q2.Do you know about SEO ? Is it true that react js supports SEO support?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                SEO stands for search engine optimization. It is the process of optimizing online 
+    content so that it shows up as the top result on a search engine. It is the art of 
+    ranking high on a search engine for particular keyword searches.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q3.clean up in useEffect?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                clean up function: this function gets executed when the component is unmounted from the screen. This is mostly used for memory leaks.
+                 //componentWillUnmount : Cleanup function in useEffect. useEffect(() =>{ console.log("Inside useEffect hook");
+   <pre class="pre">
+    return function cleanup() {
+        console.log("componentWillUnmount is happen...!")
+    }
+  })
+   </pre>
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q4.What is the use of useCallback and useMemo?</h1>
+        </div>
+        <div>
+            <p><span class="ans">useCallback:</span>
+                useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+                <br><br>
+                <span class="ans">useMemo:</span>
+                useMemo that allows to memoize expensive functions so that accepts a second parameter to declare dependencies. The expensive function will only run when its dependencies have changed.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q5.Why do we need keys in react list?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                Keys help React identify which items have changed (added/removed/re-ordered). To give a unique identity to every element inside the array, a key is required.
+            </p>
+        </div>
+    </div>
+    <div id="q1">
+        <div>
+            <h1>Q6.Do you know about redux?</h1>
+        </div>
+        <div>
+            <p><span class="ans">Answer:</span>
+                Redux is a state management library for javascript. It was mainly created to help manage the state of React applications.
+                and redux flows the undirectional data flow. ui to action to redux to store.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
